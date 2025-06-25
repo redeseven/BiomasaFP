@@ -134,9 +134,9 @@ mergefp <- function (trees,md,wd) {
 
 
         #merge information
-        dataset <- merge(Udfile, MT, by = c('PlotViewID','PlotID'), all.x = all)
+        dataset <- merge(Udfile, MT, by = c('PlotViewID','PlotID'), all.x = TRUE)
         #head(dataset)
-        datasetb <- merge(dataset, W, by = c('PlotViewID','TreeID','PlotID','PlotCode'), all.x = all)
+        datasetb <- merge(dataset, W, by = c('PlotViewID','TreeID','PlotID','PlotCode'), all.x = TRUE)
         #head(datasetb)
         #Select columns for mergefp output
         datasetc <- datasetb[,c('Continent', 'Country', 'PlotID', 'PlotCode'
